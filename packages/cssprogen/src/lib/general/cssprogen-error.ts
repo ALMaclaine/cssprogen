@@ -1,20 +1,25 @@
-enum CSSProgenError {
-  ERROR_01 = 'Default Error',
+import { sprintf } from './sprintf';
+import { isProduction } from './is-production';
+
+enum CSSProgenErrorSet {
+  ERROR_01 = 'Error Code: 01',
 }
 
 const CSSProgenErrors = {
-  [CSSProgenError.ERROR_01]: 'Default Error',
+  [CSSProgenErrorSet.ERROR_01]: 'Default Error',
 };
 
-const format = (code: CSSProgenError, args: string[]): string => {
-  const _format = (built: string, it = 0): string => {
-    if (/%s/.test(built) && args[it]) {
-      return _format(built.replace('%s', args[it]), it + 1);
+const formatError = (code: CSSProgenErrorSet, args: string[]): string =>
+  sprintf(CSSProgenErrors[code], args);
+
+class CSSProgenError extends Error {
+  constructor(code: CSSProgenErrorSet, args: never[]) {
+    if (isProduction()) {
+      super('CSSProgen: An error occurred.');
     } else {
-      return built;
+      super(formatError(code, args));
     }
-  };
-  return _format(CSSProgenErrors[code]);
-};
+  }
+}
 
-export { format };
+export { CSSProgenError };

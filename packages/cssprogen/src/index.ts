@@ -1,5 +1,5 @@
+// type imports
 import { BorderSide } from './lib/types/border-sides';
-
 import {
   Color,
   ContrastScores,
@@ -9,13 +9,9 @@ import {
   RGBAColor,
   RGBColor,
 } from './lib/types/color';
-
 import { FluidRangeConfiguration } from './lib/types/fluid-range-configuration';
-
 import { FontFaceConfiguration } from './lib/types/font-face-configuration';
-
 import { Length, Styles } from './lib/types/general';
-
 import {
   GradientConfigurationLinear,
   GradientConfigurationRadial,
@@ -23,15 +19,28 @@ import {
   GradientToDirection,
   GradientExtent,
 } from './lib/types/gradient-configuration';
-
 import { ModularScaleRatio } from './lib/types/modular-scale-ratio';
-
 import { Shadow, ShadowLevel } from './lib/types/shadow';
-
 import { TimingFunction } from './lib/types/timing-functions';
+
+// math imports
 
 import { min } from './lib/math/min';
 import { max } from './lib/math/max';
+import { clamp } from './lib/math/clamp';
+import { clamp8Bit } from './lib/math/clamp8Bit';
+import { guard } from './lib/math/guard';
+
+// general imports
+
+import { capitalizeString } from './lib/general/capitalize-string';
+import { isBrowser } from './lib/general/is-browser';
+import {
+  isProduction,
+  isProductionBrowser,
+  isProductionNode,
+  setProductionBrowser,
+} from './lib/general/is-production';
 
 /*
   Types Exports
@@ -87,3 +96,30 @@ export { min };
 
 // math/max
 export { max };
+
+// math/clamp
+export { clamp };
+
+// math/clamp8Bit
+export { clamp8Bit };
+
+// math/guard
+export { guard };
+
+/*
+  general exports
+*/
+
+// general/capitalizeString
+export { capitalizeString };
+
+// general/isBrowser
+export { isBrowser };
+
+// general/isProduction
+export {
+  isProduction,
+  isProductionBrowser,
+  isProductionNode,
+  setProductionBrowser,
+};
