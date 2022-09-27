@@ -30,6 +30,9 @@ import { Shadow, ShadowLevel } from './lib/types/shadow';
 
 import { TimingFunction } from './lib/types/timing-functions';
 
+import { min } from './lib/math/min';
+import { max } from './lib/math/max';
+
 /*
   Types Exports
 */
@@ -74,3 +77,13 @@ export { Shadow, ShadowLevel };
 
 // types/timing-functions
 export { TimingFunction };
+
+/*
+  math exports
+*/
+
+// math/min
+export { min };
+
+// math/max
+export { max };
