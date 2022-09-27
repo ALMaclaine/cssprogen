@@ -27,12 +27,11 @@ import { TimingFunction } from './lib/types/timing-functions';
 
 import { min } from './lib/math/min';
 import { max } from './lib/math/max';
-import { clamp } from './lib/math/clamp';
-import { clamp8Bit } from './lib/math/clamp8Bit';
+import { clamp, clamp8Bit } from './lib/math/clamp';
 import { guard } from './lib/math/guard';
 import { range } from './lib/math/range';
-import { lerp } from './lib/math/lerp';
-import { invlerp } from './lib/math/invlerp';
+import { lerp, lerp8Bit } from './lib/math/lerp';
+import { invlerp, invlerp8Bit } from './lib/math/invlerp';
 
 // general imports
 
@@ -101,19 +100,16 @@ export { min };
 export { max };
 
 // math/clamp
-export { clamp };
-
-// math/clamp8Bit
-export { clamp8Bit };
+export { clamp, clamp8Bit };
 
 // math/guard
 export { guard };
 
 // math/lerp
-export { lerp };
+export { lerp, lerp8Bit };
 
 // math/invlerp
-export { invlerp };
+export { invlerp, invlerp8Bit };
 
 // math/range
 export { range };
