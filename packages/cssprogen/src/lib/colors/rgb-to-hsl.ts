@@ -1,5 +1,5 @@
 import { normalizeRGB } from './normalize-rgb';
-import { HSLColor, RGBColor, RGBSet } from '../types/color';
+import { HSLColor, HSLAColor, RGBColor, RGBAColor } from '../types/color';
 import { isAchromaticRGB } from './is-achromatic';
 import { colorStats } from './color-stats';
 import { calculateHue } from './calculate-hue';
@@ -17,4 +17,15 @@ const rgbToHSL = (color: RGBColor, tolerance = 0): HSLColor => {
   }
 };
 
-export { rgbToHSL };
+const rgbaToHSLA = (color: RGBAColor, tolerance = 0): HSLAColor => {
+  const { saturation, lightness, hue }: HSLColor = rgbToHSL(color, tolerance);
+  const { alpha } = color;
+
+  if (isAchromaticRGB(color, tolerance)) {
+    return { hue: 0, saturation: 0, lightness, alpha };
+  } else {
+    return { hue, saturation, lightness, alpha };
+  }
+};
+
+export { rgbToHSL, rgbaToHSLA };
