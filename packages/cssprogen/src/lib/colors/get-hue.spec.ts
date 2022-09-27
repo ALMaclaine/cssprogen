@@ -15,7 +15,7 @@ describe('getHue works', () => {
 
     const errorColor = { red: 0, blue: 255, green: 0 };
     expect(() => getHue(errorColor, 25)).toThrowError(
-      new CSSProgenError(CSSProgenErrorSet.ERROR_002, [25, errorColor] as never)
+      new CSSProgenError(CSSProgenErrorSet.ERROR_002, [25, errorColor])
     );
   });
 });

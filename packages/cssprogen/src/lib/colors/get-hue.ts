@@ -11,10 +11,7 @@ const getHue = (color: RGBColor, match: number): RGBSet => {
     case blue:
       return RGBSet.BLUE;
     default: {
-      throw new CSSProgenError(CSSProgenErrorSet.ERROR_002, [
-        match,
-        color,
-      ] as never);
+      throw new CSSProgenError(CSSProgenErrorSet.ERROR_002, [match, color]);
     }
   }
 };

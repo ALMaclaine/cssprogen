@@ -1,4 +1,5 @@
 import { stripUnit } from './strip-unit';
+import { CSSProgenError, CSSProgenErrorSet } from '../general/cssprogen-error';
 
 describe('stripUnit', () => {
   it('should strip px from whole values', () => {
@@ -203,9 +204,9 @@ describe('stripUnit', () => {
     });
   });
 
-  it('should return invalid value when passed', () => {
-    expect({ '--dimension': stripUnit('blah') }).toEqual({
-      '--dimension': 'blah',
-    });
+  it('Throws when passed invalid value', () => {
+    expect(() => stripUnit('blah')).toThrowError(
+      new CSSProgenError(CSSProgenErrorSet.ERROR_004)
+    );
   });
 });

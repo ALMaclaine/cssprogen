@@ -24,6 +24,7 @@ import {
 import { ModularScaleRatio } from './lib/types/modular-scale-ratio';
 import { Shadow, ShadowLevel } from './lib/types/shadow';
 import { TimingFunction } from './lib/types/timing-functions';
+import { Units, UnitsAbsolute, UnitsRelative } from './lib/types/units';
 
 // math imports
 
@@ -46,6 +47,7 @@ import {
   isProductionNode,
   setProductionBrowser,
 } from './lib/general/is-production';
+import { isString } from './lib/general/is-string';
 
 // color imports
 import { isAchromaticRGB } from './lib/colors/is-achromatic';
@@ -56,6 +58,7 @@ import { getHue } from './lib/colors/get-hue';
 import { rgbToHSL, rgbaToHSLA } from './lib/colors/rgb-to-hsl';
 import { reduceHexValue } from './lib/colors/reduce-hex-value';
 import { stripUnit } from './lib/colors/strip-unit';
+import { pxToFactory } from './lib/colors/px-to-factory';
 
 /*
   Types Exports
@@ -104,6 +107,9 @@ export { Shadow, ShadowLevel };
 // types/timing-functions
 export { TimingFunction };
 
+// types/units
+export { Units, UnitsAbsolute, UnitsRelative };
+
 /*
   math exports
 */
@@ -150,6 +156,9 @@ export {
   setProductionBrowser,
 };
 
+// general/isString
+export { isString };
+
 /*
   Color Exports
 */
@@ -177,3 +186,6 @@ export { reduceHexValue };
 
 // colors/strip-unit
 export { stripUnit };
+
+// colors/pxToFactory
+export { pxToFactory };
