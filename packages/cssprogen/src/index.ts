@@ -3,11 +3,13 @@ import { BorderSide } from './lib/types/border-sides';
 import {
   Color,
   ContrastScores,
+  ColorStats,
   HSLColor,
   Alpha,
   HSLAColor,
   RGBAColor,
   RGBColor,
+  RGBSet,
 } from './lib/types/color';
 import { FluidRangeConfiguration } from './lib/types/fluid-range-configuration';
 import { FontFaceConfiguration } from './lib/types/font-face-configuration';
@@ -32,6 +34,7 @@ import { guard } from './lib/math/guard';
 import { range } from './lib/math/range';
 import { lerp, lerp8Bit } from './lib/math/lerp';
 import { invlerp, invlerp8Bit } from './lib/math/invlerp';
+import { fuzzyEquals } from './lib/math/fuzzy-equals';
 
 // general imports
 
@@ -44,6 +47,10 @@ import {
   setProductionBrowser,
 } from './lib/general/is-production';
 
+// color imports
+import { isAchromaticRGB } from './lib/colors/is-achromatic';
+import { normalizeRGB } from './lib/colors/normalize-rgb';
+
 /*
   Types Exports
 */
@@ -55,11 +62,13 @@ export { BorderSide };
 export {
   Color,
   ContrastScores,
+  ColorStats,
   HSLColor,
   Alpha,
   HSLAColor,
   RGBAColor,
   RGBColor,
+  RGBSet,
 };
 
 // types/fluid-range-configuration
@@ -114,6 +123,9 @@ export { invlerp, invlerp8Bit };
 // math/range
 export { range };
 
+// math/fuzzy-equals
+export { fuzzyEquals };
+
 /*
   general exports
 */
@@ -131,3 +143,13 @@ export {
   isProductionNode,
   setProductionBrowser,
 };
+
+/*
+  Color Exports
+*/
+
+// colors/is-achromatic
+export { isAchromaticRGB };
+
+// colors/normalize-rgb
+export { normalizeRGB };

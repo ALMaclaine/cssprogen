@@ -1,4 +1,5 @@
-import { invlerp8Bit, RGBColor, RGBAColor } from 'cssprogen';
+import { RGBColor } from '../types/color';
+import { invlerp8Bit } from '../math/invlerp';
 
 const normalizeRGB = ({ red, green, blue }: RGBColor): RGBColor => {
   return {
@@ -8,11 +9,4 @@ const normalizeRGB = ({ red, green, blue }: RGBColor): RGBColor => {
   };
 };
 
-const normalizeRGBA = ({ alpha, ...rgb }: RGBAColor): RGBAColor => {
-  return {
-    ...normalizeRGB(rgb),
-    alpha: invlerp8Bit(alpha),
-  };
-};
-
-export { normalizeRGBA, normalizeRGB };
+export { normalizeRGB };

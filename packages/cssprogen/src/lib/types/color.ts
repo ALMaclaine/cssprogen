@@ -1,5 +1,16 @@
 type Color = string;
 
+enum RGBSet {
+  RED = 'RED',
+  GREEN = 'GREEN',
+  BLUE = 'BLUE',
+}
+
+interface SaturationLightness {
+  lightness: number;
+  saturation: number;
+}
+
 interface ContrastScores {
   AA: boolean;
   AALarge: boolean;
@@ -7,10 +18,16 @@ interface ContrastScores {
   AAALarge: boolean;
 }
 
-interface HSLColor {
+interface HSLColor extends SaturationLightness {
   hue: number;
-  saturation: number;
-  color: number;
+}
+
+interface ColorStats extends SaturationLightness {
+  maxColor: number;
+  maxColorHue: RGBSet;
+  minColor: number;
+  minColorHue: RGBSet;
+  delta: number;
 }
 
 interface Alpha {
@@ -30,9 +47,11 @@ interface RGBAColor extends RGBColor, Alpha {}
 export {
   Color,
   ContrastScores,
+  ColorStats,
   HSLColor,
   Alpha,
   HSLAColor,
   RGBAColor,
   RGBColor,
+  RGBSet,
 };
