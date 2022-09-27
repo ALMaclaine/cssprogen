@@ -1,2 +1,2 @@
-const min = (val1: number, val2: number) => Math.min(val1, val2);
+const min = (...args: number[]) => Math.min(...args);
 export { min };

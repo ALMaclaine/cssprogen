@@ -14,5 +14,8 @@ describe('max works', () => {
 
     expect(max(2, 1)).toBe(2);
     expect(max(1, 2)).toBe(2);
+
+    expect(max(2, 1, 3)).toBe(3);
+    expect(max(1, 2, 3)).toBe(3);
   });
 });

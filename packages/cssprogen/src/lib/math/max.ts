@@ -1,2 +1,2 @@
-const max = (val1: number, val2: number) => Math.max(val1, val2);
+const max = (...args: number[]) => Math.max(...args);
 export { max };
