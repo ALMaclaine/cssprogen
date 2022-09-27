@@ -17,9 +17,11 @@ import { FontFaceConfiguration } from './lib/types/font-face-configuration';
 import { Length, Styles } from './lib/types/general';
 
 import {
-  LinearGradientConfiguration,
-  RadialGradientConfiguration,
-  BaseGradientConfiguration,
+  GradientConfigurationLinear,
+  GradientConfigurationRadial,
+  GradientConfigurationBase,
+  GradientToDirection,
+  GradientExtent,
 } from './lib/types/gradient-configuration';
 
 import { ModularScaleRatio } from './lib/types/modular-scale-ratio';
@@ -57,9 +59,11 @@ export { Length, Styles };
 
 // types/gradient-configuration
 export {
-  LinearGradientConfiguration,
-  RadialGradientConfiguration,
-  BaseGradientConfiguration,
+  GradientConfigurationLinear,
+  GradientConfigurationRadial,
+  GradientConfigurationBase,
+  GradientToDirection,
+  GradientExtent,
 };
 
 // types/modular-scale-ratio

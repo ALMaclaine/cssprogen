@@ -1,21 +1,42 @@
 import { Color } from './color';
 
-interface BaseGradientConfiguration {
+type GradientShape = 'circle' | 'ellipse';
+
+type GradientExtent =
+  | 'closest-corner'
+  | 'closest-side'
+  | 'farthest-corner'
+  | 'farthest-side';
+
+type GradientToDirection =
+  | string
+  | 'to left'
+  | 'to right'
+  | 'to top'
+  | 'to bottom'
+  | 'to top left'
+  | 'to top right'
+  | 'to bottom left'
+  | 'to bottom right';
+
+interface GradientConfigurationBase {
   colorStops: Color[];
-  fallback?: string;
+  fallback?: Color;
 }
 
-interface LinearGradientConfiguration extends BaseGradientConfiguration {
-  toDirection?: string;
+interface GradientConfigurationLinear extends GradientConfigurationBase {
+  toDirection?: GradientToDirection;
 }
 
-interface RadialGradientConfiguration extends BaseGradientConfiguration {
-  extent?: string;
-  shape?: string;
+interface GradientConfigurationRadial extends GradientConfigurationBase {
+  extent?: GradientExtent;
+  shape?: GradientShape;
 }
 
 export {
-  LinearGradientConfiguration,
-  RadialGradientConfiguration,
-  BaseGradientConfiguration,
+  GradientConfigurationLinear,
+  GradientConfigurationRadial,
+  GradientConfigurationBase,
+  GradientToDirection,
+  GradientExtent,
 };
