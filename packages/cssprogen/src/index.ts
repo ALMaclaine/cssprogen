@@ -50,6 +50,9 @@ import {
 // color imports
 import { isAchromaticRGB } from './lib/colors/is-achromatic';
 import { normalizeRGB } from './lib/colors/normalize-rgb';
+import { calculateSaturation } from './lib/colors/calculate-saturation';
+import { colorStats } from './lib/colors/color-stats';
+import { getHue } from './lib/colors/get-hue';
 
 /*
   Types Exports
@@ -153,3 +156,12 @@ export { isAchromaticRGB };
 
 // colors/normalize-rgb
 export { normalizeRGB };
+
+// colors/calculate-saturation
+export { calculateSaturation };
+
+// colors/color-stats
+export { colorStats };
+
+// colors/get-hue
+export { getHue };

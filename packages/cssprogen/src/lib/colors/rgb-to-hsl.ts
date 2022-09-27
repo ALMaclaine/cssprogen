@@ -1,36 +1,7 @@
 import { normalizeRGB } from './normalize-rgb';
-import { ColorStats, HSLColor, RGBColor, RGBSet } from '../types/color';
-import { max } from '../math/max';
-import { min } from '../math/min';
+import { HSLColor, RGBColor, RGBSet } from '../types/color';
 import { isAchromaticRGB } from './is-achromatic';
-import { getHue } from './get-hue';
-
-const calculateSaturation = (lightness: number, delta: number, sum: number) => {
-  if (lightness > 0.5) {
-    return delta / (2 - sum);
-  } else {
-    return delta / sum;
-  }
-};
-
-const colorStats = (normalizedRGB: RGBColor): ColorStats => {
-  const { red, green, blue }: RGBColor = normalizedRGB;
-  const maxColor = max(red, green, blue);
-  const minColor = min(red, green, blue);
-  const maxMinSum = maxColor + minColor;
-  const delta = maxColor - minColor;
-  const lightness = maxMinSum / 2;
-  const saturation = calculateSaturation(lightness, delta, maxMinSum);
-  return {
-    maxColor,
-    minColor,
-    delta,
-    lightness,
-    saturation,
-    maxColorHue: getHue(normalizedRGB, maxColor),
-    minColorHue: getHue(normalizedRGB, minColor),
-  };
-};
+import { colorStats } from './color-stats';
 
 const calculateHueRed = (normalizedRGB: RGBColor, delta: number): number => {
   const { green, blue }: RGBColor = normalizedRGB;
