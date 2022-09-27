@@ -1,4 +1,5 @@
 import { guard } from './guard';
+import { clamp } from 'cssprogen';
 
 describe('guard works', () => {
   it('guard works work', () => {
@@ -21,5 +22,11 @@ describe('guard works', () => {
     expect(guard(-1, 10, 0)).toBe(10);
     expect(guard(0, 10, 0)).toBe(10);
     expect(guard(1, 10, 0)).toBe(10);
+
+    expect(guard(-1)).toBe(0);
+    expect(guard(0)).toBe(0);
+    expect(guard(0.5)).toBe(0.5);
+    expect(guard(1)).toBe(1);
+    expect(guard(1.5)).toBe(1);
   });
 });

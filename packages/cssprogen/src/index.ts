@@ -30,6 +30,9 @@ import { max } from './lib/math/max';
 import { clamp } from './lib/math/clamp';
 import { clamp8Bit } from './lib/math/clamp8Bit';
 import { guard } from './lib/math/guard';
+import { range } from './lib/math/range';
+import { lerp } from './lib/math/lerp';
+import { invlerp } from './lib/math/invlerp';
 
 // general imports
 
@@ -105,6 +108,15 @@ export { clamp8Bit };
 
 // math/guard
 export { guard };
+
+// math/lerp
+export { lerp };
+
+// math/invlerp
+export { invlerp };
+
+// math/range
+export { range };
 
 /*
   general exports
