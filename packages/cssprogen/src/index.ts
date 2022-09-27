@@ -53,6 +53,9 @@ import { normalizeRGB } from './lib/colors/normalize-rgb';
 import { calculateSaturation } from './lib/colors/calculate-saturation';
 import { colorStats } from './lib/colors/color-stats';
 import { getHue } from './lib/colors/get-hue';
+import { rgbToHSL, rgbaToHSLA } from './lib/colors/rgb-to-hsl';
+import { reduceHexValue } from './lib/colors/reduce-hex-value';
+import { stripUnit } from './lib/colors/strip-unit';
 
 /*
   Types Exports
@@ -165,3 +168,12 @@ export { colorStats };
 
 // colors/get-hue
 export { getHue };
+
+// colors/rgb-to-hsl
+export { rgbToHSL, rgbaToHSLA };
+
+// colors/reduce-to-hex
+export { reduceHexValue };
+
+// colors/strip-unit
+export { stripUnit };
