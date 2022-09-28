@@ -55,32 +55,32 @@ describe('pxToFactory', () => {
 
     it('should throw an error if a non-pixel value is passed for the first arg', () => {
       const em = pxToFactory('em');
-      expect(() => ({ height: em('10em') })).toThrow(
+      expect(() => ({ height: em('10em') })).toThrowError(
         new CSSProgenError(CSSProgenErrorSet.ERROR_003, ['first', 'em', '10em'])
       );
     });
 
     it('should throw an error if a non-pixel value is passed for the second arg', () => {
       const em = pxToFactory('em');
-      expect(() => ({ height: em('10px', '16em') })).toThrow(
+      expect(() => ({ height: em('10px', '16em') })).toThrowError(
         new CSSProgenError(CSSProgenErrorSet.ERROR_003, [
           'second',
           'em',
-          '10em',
+          '10px',
         ])
       );
     });
 
     it('should throw an error if an invalid pixel value is passed', () => {
       const em = pxToFactory('em');
-      expect(() => ({ height: em('apx') })).toThrow(
+      expect(() => ({ height: em('apx') })).toThrowError(
         new CSSProgenError(CSSProgenErrorSet.ERROR_004)
       );
     });
 
     it('should throw an error if an invalid base value is passed', () => {
       const em = pxToFactory('em');
-      expect(() => ({ height: em('16px', 'apx') })).toThrow(
+      expect(() => ({ height: em('16px', 'apx') })).toThrowError(
         new CSSProgenError(CSSProgenErrorSet.ERROR_004)
       );
     });
