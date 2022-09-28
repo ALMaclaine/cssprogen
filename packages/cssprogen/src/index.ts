@@ -59,6 +59,7 @@ import { rgbToHSL, rgbaToHSLA } from './lib/colors/rgb-to-hsl';
 import { reduceHexValue } from './lib/colors/reduce-hex-value';
 import { stripUnit } from './lib/colors/strip-unit';
 import { pxToFactory } from './lib/colors/px-to-factory';
+import { numberToHex } from './lib/colors/number-to-hex';
 
 /*
   Types Exports
@@ -187,5 +188,8 @@ export { reduceHexValue };
 // colors/strip-unit
 export { stripUnit };
 
-// colors/pxToFactory
+// colors/px-to-factory
 export { pxToFactory };
+
+// colors/number-to-hex
+export { numberToHex };
