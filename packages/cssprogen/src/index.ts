@@ -62,7 +62,7 @@ import { getHue } from './lib/colors/get-hue';
 import { rgbToHSL, rgbaToHSLA } from './lib/colors/rgb-to-hsl';
 import { reduceHexValue } from './lib/colors/reduce-hex-value';
 import { stripUnit } from './lib/colors/strip-unit';
-import { pxToFactory } from './lib/colors/px-to-factory';
+import { pxToFactory, pxToEM, pxToREM } from './lib/general/px-to-factory';
 import { numberToHex } from './lib/colors/number-to-hex';
 
 /*
@@ -196,7 +196,7 @@ export { reduceHexValue };
 export { stripUnit };
 
 // colors/px-to-factory
-export { pxToFactory };
+export { pxToFactory, pxToREM, pxToEM };
 
 // colors/number-to-hex
 export { numberToHex };

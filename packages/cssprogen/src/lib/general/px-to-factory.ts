@@ -1,7 +1,7 @@
 import { Units } from '../types/units';
-import { isString } from '../general/is-string';
-import { CSSProgenError, CSSProgenErrorSet } from '../general/cssprogen-error';
-import { stripUnit } from './strip-unit';
+import { isString } from './is-string';
+import { CSSProgenError, CSSProgenErrorSet } from './cssprogen-error';
+import { stripUnit } from '../colors/strip-unit';
 
 const pxToFactory =
   (to: Units) =>
@@ -27,4 +27,7 @@ const pxToFactory =
     return `${ratio}${to}`;
   };
 
-export { pxToFactory };
+const pxToEM = pxToFactory('em');
+const pxToREM = pxToFactory('rem');
+
+export { pxToFactory, pxToEM, pxToREM };
