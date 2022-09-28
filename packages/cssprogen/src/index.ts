@@ -26,6 +26,9 @@ import { Shadow, ShadowLevel } from './lib/types/shadow';
 import { TimingFunction } from './lib/types/timing-functions';
 import { Units, UnitsAbsolute, UnitsRelative } from './lib/types/units';
 
+// css imports
+import { getCSSVar } from './lib/css/get-css-var';
+
 // math imports
 
 import { min } from './lib/math/min';
@@ -48,6 +51,7 @@ import {
   setProductionBrowser,
 } from './lib/general/is-production';
 import { isString } from './lib/general/is-string';
+import { hasDocument, hasDocumentElement } from './lib/general/has-document';
 
 // color imports
 import { isAchromaticRGB, isAchromaticHSL } from './lib/colors/is-achromatic';
@@ -160,6 +164,9 @@ export {
 // general/isString
 export { isString };
 
+// general/has-document-element
+export { hasDocument, hasDocumentElement };
+
 /*
   Color Exports
 */
@@ -193,3 +200,6 @@ export { pxToFactory };
 
 // colors/number-to-hex
 export { numberToHex };
+
+// css/get-css-var
+export { getCSSVar };

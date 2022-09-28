@@ -4,7 +4,8 @@ import {
   calculateHueGreen,
   calculateHueBlue,
 } from './calculate-hue';
-import { normalizeRGB, RGBColor, RGBSet } from 'cssprogen';
+import { normalizeRGB } from './normalize-rgb';
+import { RGBColor, RGBSet } from '../types/color';
 
 describe('calculateHue works', () => {
   it('calculateHueRed works', () => {
