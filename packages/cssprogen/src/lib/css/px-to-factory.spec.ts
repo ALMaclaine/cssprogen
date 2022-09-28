@@ -1,5 +1,5 @@
 import { pxToFactory } from './px-to-factory';
-import { CSSProgenError, CSSProgenErrorSet } from './cssprogen-error';
+import { CSSProgenError, CSSProgenErrorSet } from '../general/cssprogen-error';
 
 describe('pxToFactory', () => {
   describe('pxToFactory', () => {

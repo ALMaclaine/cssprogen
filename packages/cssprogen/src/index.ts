@@ -61,8 +61,8 @@ import { colorStats } from './lib/colors/color-stats';
 import { getHue } from './lib/colors/get-hue';
 import { rgbToHSL, rgbaToHSLA } from './lib/colors/rgb-to-hsl';
 import { reduceHexValue } from './lib/colors/reduce-hex-value';
-import { stripUnit } from './lib/colors/strip-unit';
-import { pxToFactory, pxToEM, pxToREM } from './lib/general/px-to-factory';
+import { stripUnit } from './lib/css/strip-unit';
+import { pxToFactory, pxToEM, pxToREM } from './lib/css/px-to-factory';
 import { numberToHex } from './lib/colors/number-to-hex';
 
 /*

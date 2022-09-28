@@ -1,7 +1,7 @@
 import { Units } from '../types/units';
-import { isString } from './is-string';
-import { CSSProgenError, CSSProgenErrorSet } from './cssprogen-error';
-import { stripUnit } from '../colors/strip-unit';
+import { isString } from '../general/is-string';
+import { CSSProgenError, CSSProgenErrorSet } from '../general/cssprogen-error';
+import { stripUnit } from './strip-unit';
 
 const pxToFactory =
   (to: Units) =>
