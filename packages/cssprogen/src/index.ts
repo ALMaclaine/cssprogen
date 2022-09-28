@@ -24,7 +24,14 @@ import {
 import { ModularScaleRatio } from './lib/types/modular-scale-ratio';
 import { Shadow, ShadowLevel } from './lib/types/shadow';
 import { TimingFunction } from './lib/types/timing-functions';
-import { Units, UnitsAbsolute, UnitsRelative } from './lib/types/units';
+import {
+  Units,
+  UnitsAbsolute,
+  UnitsRelative,
+  UNITS,
+  UNITS_RELATIVE,
+  UNITS_ABSOLUTE,
+} from './lib/types/units';
 
 // css imports
 import { getCSSVar } from './lib/css/get-css-var';
@@ -113,7 +120,14 @@ export { Shadow, ShadowLevel };
 export { TimingFunction };
 
 // types/units
-export { Units, UnitsAbsolute, UnitsRelative };
+export {
+  Units,
+  UnitsAbsolute,
+  UnitsRelative,
+  UNITS_RELATIVE,
+  UNITS,
+  UNITS_ABSOLUTE,
+};
 
 /*
   math exports
