@@ -1,4 +1,4 @@
-import { RGBColor } from '../types/color';
+import { HSLColor, RGBColor } from '../types/color';
 import { max } from '../math/max';
 import { min } from '../math/min';
 import { fuzzyEquals } from '../math/fuzzy-equals';
@@ -9,4 +9,7 @@ const isAchromaticRGB = ({ red, green, blue }: RGBColor, tolerance = 0) => {
   return fuzzyEquals(maxColor, minColor, tolerance);
 };
 
-export { isAchromaticRGB };
+const isAchromaticHSL = ({ saturation }: HSLColor, tolerance = 0) =>
+  fuzzyEquals(saturation, 0, tolerance);
+
+export { isAchromaticRGB, isAchromaticHSL };

@@ -50,7 +50,7 @@ import {
 import { isString } from './lib/general/is-string';
 
 // color imports
-import { isAchromaticRGB } from './lib/colors/is-achromatic';
+import { isAchromaticRGB, isAchromaticHSL } from './lib/colors/is-achromatic';
 import { normalizeRGB } from './lib/colors/normalize-rgb';
 import { calculateSaturation } from './lib/colors/calculate-saturation';
 import { colorStats } from './lib/colors/color-stats';
@@ -165,7 +165,7 @@ export { isString };
 */
 
 // colors/is-achromatic
-export { isAchromaticRGB };
+export { isAchromaticRGB, isAchromaticHSL };
 
 // colors/normalize-rgb
 export { normalizeRGB };

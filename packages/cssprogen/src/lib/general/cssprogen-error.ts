@@ -1,7 +1,5 @@
 import { sprintf } from './sprintf';
 import { isProduction } from './is-production';
-import { isString } from './is-string';
-import { isNumber } from './is-number';
 import { toStringAll } from './to-string-all';
 
 enum CSSProgenErrorSet {
@@ -12,7 +10,7 @@ enum CSSProgenErrorSet {
   ERROR_005 = 'Error Code 005: Invalid Named Color',
 }
 
-const ERROR_001 = 'Unreachable code executed.';
+const ERROR_001 = 'Unreachable code reached.';
 const ERROR_002 =
   'getHue was passed a match that is not in the color set. Match: %s Color Set: %s.';
 const ERROR_003 =
