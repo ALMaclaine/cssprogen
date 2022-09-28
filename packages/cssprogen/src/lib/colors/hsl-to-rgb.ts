@@ -1,4 +1,5 @@
-import { HSLAColor, HSLColor, RGBAColor, RGBColor } from 'cssprogen';
+import { lerp8Bit } from '../math/lerp';
+import { HSLAColor, HSLColor, RGBAColor, RGBColor } from '../types/color';
 import { isAchromaticHSL } from './is-achromatic';
 import { createGray } from './create-gray';
 import { huePrime } from './hue-prime';
@@ -6,6 +7,7 @@ import { chroma } from './chroma';
 import { abs } from '../math/abs';
 import { mod } from '../math/mod';
 import { CSSProgenError, CSSProgenErrorSet } from '../general/cssprogen-error';
+import { round } from '../math/round';
 
 const getComponents = (
   hPrime: number,
@@ -45,9 +47,9 @@ const hslToRGB = (color: HSLColor): RGBColor => {
   const finalGreen = green + lightnessModification;
   const finalBlue = blue + lightnessModification;
   return {
-    red: finalRed,
-    green: finalGreen,
-    blue: finalBlue,
+    red: round(lerp8Bit(finalRed)),
+    green: round(lerp8Bit(finalGreen)),
+    blue: round(lerp8Bit(finalBlue)),
   };
 };
 
