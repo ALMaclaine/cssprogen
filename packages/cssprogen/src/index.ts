@@ -13,7 +13,7 @@ import {
 } from './lib/types/color';
 import { FluidRangeConfiguration } from './lib/types/fluid-range-configuration';
 import { FontFaceConfiguration } from './lib/types/font-face-configuration';
-import { Length, Styles } from './lib/types/general';
+import { Size, Styles, Length } from './lib/types/general';
 import {
   GradientConfigurationLinear,
   GradientConfigurationRadial,
@@ -92,7 +92,7 @@ export { FluidRangeConfiguration };
 export { FontFaceConfiguration };
 
 // types/general
-export { Length, Styles };
+export { Size, Styles, Length };
 
 // types/gradient-configuration
 export {

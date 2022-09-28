@@ -1,8 +1,8 @@
-import { Length } from './general';
+import { Size } from './general';
 
 interface FluidRangeConfiguration {
-  fromSize: Length;
-  toSize: Length;
+  fromSize: Size;
+  toSize: Size;
 }
 
 export { FluidRangeConfiguration };

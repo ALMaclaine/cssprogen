@@ -1,7 +1,14 @@
-type Length = string | number;
+import { Units } from './units';
+
+type Size = string | number;
+
+interface Length {
+  value: number;
+  unit: Units;
+}
 
 interface Styles {
   [ruleOrSelector: string]: string | number | Styles;
 }
 
-export { Length, Styles };
+export { Size, Styles, Length };

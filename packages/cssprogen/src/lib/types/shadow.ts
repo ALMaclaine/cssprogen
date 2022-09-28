@@ -1,5 +1,5 @@
 import { Color } from './color';
-import { Length } from './general';
+import { Size } from './general';
 
 enum ShadowLevel {
   XS = 'XS',
@@ -11,10 +11,10 @@ enum ShadowLevel {
 
 interface Shadow {
   color: Color;
-  offsetX?: Length;
-  offsetY?: Length;
-  blurRadius?: Length;
-  spread?: Length;
+  offsetX?: Size;
+  offsetY?: Size;
+  blurRadius?: Size;
+  spread?: Size;
   inset?: boolean;
 }
 
