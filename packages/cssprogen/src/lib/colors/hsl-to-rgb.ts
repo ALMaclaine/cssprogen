@@ -32,7 +32,7 @@ const getComponents = (
 
 const hslToRGB = (color: HSLColor): RGBColor => {
   const { hue, saturation, lightness } = color;
-  if (isAchromaticHSL(color)) return createGray(lightness);
+  if (isAchromaticHSL(color)) return createGray(round(lerp8Bit(lightness)));
   const hPrime = huePrime(hue);
   const chrom = chroma(saturation, lightness);
   const secondComponent = chrom * (1 - abs(mod(hPrime, 2) - 1));
