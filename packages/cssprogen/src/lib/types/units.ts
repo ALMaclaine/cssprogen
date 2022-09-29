@@ -1,7 +1,8 @@
-const UNITS_ABSOLUTE = ['cm', 'mn', 'Q', 'in', 'pc', 'pt', 'px'] as const;
+const UNITS_ABSOLUTE = ['cm', 'mm', 'q', 'in', 'pc', 'pt', 'px'] as const;
 type UnitsAbsolute = typeof UNITS_ABSOLUTE[number];
 
 const UNITS_RELATIVE = [
+  '%',
   'em',
   'ex',
   'ch',
@@ -11,6 +12,7 @@ const UNITS_RELATIVE = [
   'vw',
   'vh',
   'vmin',
+  'vmax',
   'vb',
   'vi',
   'svw',

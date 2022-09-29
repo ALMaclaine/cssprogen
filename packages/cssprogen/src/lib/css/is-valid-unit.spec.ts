@@ -5,6 +5,9 @@ describe('isValidUnit', () => {
     expect(isValidUnit('px')).toBeTruthy();
     expect(isValidUnit('em')).toBeTruthy();
     expect(isValidUnit('')).toBeTruthy();
+    expect(isValidUnit('PX')).toBeTruthy();
+    expect(isValidUnit('eM')).toBeTruthy();
+    expect(isValidUnit('')).toBeTruthy();
     expect(isValidUnit('px2')).toBeFalsy();
   });
 });

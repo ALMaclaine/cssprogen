@@ -1,4 +1,5 @@
-import { UNITS } from '../types/units';
+import { Units, UNITS } from '../types/units';
 
-const isValidUnit = (str: string) => UNITS.includes(str as never);
+const isValidUnit = (str: string): str is Units =>
+  UNITS.includes(str.toLowerCase() as never);
 export { isValidUnit };
