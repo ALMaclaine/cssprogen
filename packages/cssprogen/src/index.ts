@@ -58,6 +58,12 @@ import {
   setProductionBrowser,
 } from './lib/general/is-production';
 import { isString } from './lib/general/is-string';
+import { isArray } from './lib/general/is-array';
+import { isNull } from './lib/general/is-null';
+import { isNumber } from './lib/general/is-number';
+import { isObject } from './lib/general/is-object';
+import { isSet } from './lib/general/is-set';
+import { isStyles } from './lib/general/is-styles';
 import { hasDocument, hasDocumentElement } from './lib/general/has-document';
 
 // color imports
@@ -166,6 +172,24 @@ export { capitalizeString };
 
 // general/isBrowser
 export { isBrowser };
+
+// general/isArray
+export { isArray };
+
+// general/isSet
+export { isSet };
+
+// general/isStyles
+export { isStyles };
+
+// general/isNull
+export { isNull };
+
+// general/isNumber
+export { isNumber };
+
+// general/isObject
+export { isObject };
 
 // general/isProduction
 export {
