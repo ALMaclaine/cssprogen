@@ -22,6 +22,7 @@ import {
   GradientExtent,
 } from './lib/types/gradient-configuration';
 import { ModularScaleRatio } from './lib/types/modular-scale-ratio';
+import { ModularScaleParams } from './lib/types/modular-scale-params';
 import { Shadow, ShadowLevel } from './lib/types/shadow';
 import { TimingFunction } from './lib/types/timing-functions';
 import {
@@ -118,6 +119,9 @@ export {
 
 // types/modular-scale-ratio
 export { ModularScaleRatio };
+
+// types/modular-scale-params
+export { ModularScaleParams };
 
 // types/shadow
 export { Shadow, ShadowLevel };
