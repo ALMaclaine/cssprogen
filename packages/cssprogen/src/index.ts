@@ -21,7 +21,12 @@ import {
   GradientToDirection,
   GradientExtent,
 } from './lib/types/gradient-configuration';
-import { ModularScaleRatio } from './lib/types/modular-scale-ratio';
+import {
+  ModularScaleRatio,
+  MODULAR_RATIOS,
+  modularRatioSet,
+  ModularScaleEnum,
+} from './lib/types/modular-scale-ratio';
 import { ModularScaleParams } from './lib/types/modular-scale-params';
 import { Shadow, ShadowLevel } from './lib/types/shadow';
 import { TimingFunction } from './lib/types/timing-functions';
@@ -52,6 +57,7 @@ import { fuzzyEquals } from './lib/math/fuzzy-equals';
 
 import { capitalizeString } from './lib/general/capitalize-string';
 import { isBrowser } from './lib/general/is-browser';
+import { isModularRatio } from './lib/general/is-modular-ratio';
 import {
   isProduction,
   isProductionBrowser,
@@ -118,7 +124,7 @@ export {
 };
 
 // types/modular-scale-ratio
-export { ModularScaleRatio };
+export { ModularScaleRatio, MODULAR_RATIOS, modularRatioSet, ModularScaleEnum };
 
 // types/modular-scale-params
 export { ModularScaleParams };
@@ -176,6 +182,9 @@ export { capitalizeString };
 
 // general/isBrowser
 export { isBrowser };
+
+// general/is-modular-ratio
+export { isModularRatio };
 
 // general/isArray
 export { isArray };
