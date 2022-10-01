@@ -1,4 +1,5 @@
-import { isArray, Styles } from '../types/color';
+import { Styles } from '../types/general';
+import { isArray } from '../general/is-array';
 import { isStyles } from '../general/is-styles';
 
 const makeImportant = (value: string | number) => `${value} !important`;

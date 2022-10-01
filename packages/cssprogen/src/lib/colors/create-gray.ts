@@ -1,4 +1,5 @@
-import { clamp, clamp8Bit, RGBAColor, RGBColor } from '../types/color';
+import { RGBAColor, RGBColor } from '../types/color';
+import { clamp, clamp8Bit } from '../math/clamp';
 
 const createGray = (level: number): RGBColor => ({
   red: clamp8Bit(level),
