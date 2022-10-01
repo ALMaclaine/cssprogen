@@ -1,4 +1,4 @@
-import { isArray, Styles } from 'cssprogen';
+import { isArray, Styles } from '../types/color';
 import { isStyles } from '../general/is-styles';
 
 const makeImportant = (value: string | number) => `${value} !important`;

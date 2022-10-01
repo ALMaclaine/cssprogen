@@ -1,5 +1,5 @@
 import { getModularRatio, modularRatios } from './get-modular-ratio';
-import { ModularScaleEnum } from 'cssprogen';
+import { ModularScaleEnum } from '../types/modular-scale-ratio';
 
 describe('getModularRatio works', () => {
   it('getModularRatio works work', () => {

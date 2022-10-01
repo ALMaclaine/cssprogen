@@ -1,5 +1,4 @@
-import { clamp } from './clamp';
-import { clamp8Bit } from 'cssprogen';
+import { clamp, clamp8Bit } from './clamp';
 
 describe('clamp works', () => {
   it('clamp works work', () => {

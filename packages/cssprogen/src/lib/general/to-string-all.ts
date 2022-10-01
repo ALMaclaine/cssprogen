@@ -1,4 +1,4 @@
-import { isString } from 'cssprogen';
+import { isString } from './is-string';
 import { isNumber } from './is-number';
 import { isArray } from './is-array';
 

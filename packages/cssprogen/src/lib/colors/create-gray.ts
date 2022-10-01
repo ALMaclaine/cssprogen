@@ -1,4 +1,4 @@
-import { clamp, clamp8Bit, RGBAColor, RGBColor } from 'cssprogen';
+import { clamp, clamp8Bit, RGBAColor, RGBColor } from '../types/color';
 
 const createGray = (level: number): RGBColor => ({
   red: clamp8Bit(level),

@@ -1,5 +1,4 @@
 import { guard } from './guard';
-import { clamp } from 'cssprogen';
 
 describe('guard works', () => {
   it('guard works work', () => {

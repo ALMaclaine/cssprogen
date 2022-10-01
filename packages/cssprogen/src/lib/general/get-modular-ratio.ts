@@ -1,4 +1,5 @@
-import { isNumber, ModularScaleRatio } from 'cssprogen';
+import { isNumber } from './is-number';
+import { ModularScaleRatio } from '../types/modular-scale-ratio';
 
 const modularRatios: Record<ModularScaleRatio, number> = {
   unison: 1,

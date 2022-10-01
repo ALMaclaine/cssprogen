@@ -1,4 +1,4 @@
-import { RGBColor, RGBSet } from 'cssprogen';
+import { RGBColor, RGBSet } from '../types/color';
 
 const calculateHueRed = (normalizedRGB: RGBColor, delta: number): number => {
   const { green, blue }: RGBColor = normalizedRGB;
